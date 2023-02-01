@@ -1,0 +1,655 @@
+﻿;text;Weather;Clock;Calendar;Map;Phone;Email;Calculator;Translator;Web search;Social media;Small talk;Message;Reminders;Music
+0;What's the weather like outside?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+1;What's the time?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+2;What date is it today?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+3;How do I get directions to Maple Street?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+4;How can I make a call to Diana?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+5;How can I send an email to professor?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+6;How can I translate this website to Japanese?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+7;What can you tell me about this topic?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+8;Can you remind me to do something else?;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+9;What songs do you recommend listening to?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+10;What are the latest updates on Facebook?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+11;What is the result of 2*(3+4)?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+12;"What is ""caoutchouc"" in English?";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+13;How should I dress today?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+14;Can you send a message to Dave to cancel our movie tonight?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+15;Where is the nearest restaurant?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+16;Please calculate 2+9.;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+17;Wake me up at 8 a.m.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+18;Is it supposed to be a bad storm?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+19;What's the temperature outside right now?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+20;What's the forecast for next week?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+21;What's the humidity percentage today?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+22;Weather forecast today.;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+23;Start a timer for 15 minutes.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+24;Set an alarm for 7 am.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+25;Stop the alarm.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+26;What time is it?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+27;Snooze the alarm for 10 minutes.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+28;Add a meeting with John at 2pm next Monday.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+29;What is my schedule for tomorrow?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+30;Cancel the event at 4pm.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+31;Remind me to call Sarah at 6pm;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+32;When is my next meeting?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+33;Create a new event for tomorrow at 3pm;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+34;Give me directions to the nearest gas station;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+35;How do I get to Times Square?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+36;Locate nearby coffee shops;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+37;Is there any construction on my route?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+38;Dispatch 5 soldiers to the Paris.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+39;Denmark is north of Germany.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+40;Singapore is in the northern hemisphere.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+41;Call 911 in case of danger.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+42;Mute my phone during the meeting.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+43;I'm going to make a call to my mom.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+44;I can't find my phone, have you seen it?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+45;You need to charge your phone, it's almost dead.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+46;The screen of my phone has crashed.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+47;Please contact coucousss@gmail.com to get further information;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+48;Reply to this email as soon as possible.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+49;Don't forget to cc the manager on this email.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+50;Beware of those phishing email.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+51;Forward this email to address yyydung@outlook.com.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+52;If you haven't received the confirmation, don't forget to check you spam. ;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+53;Find the square root of 5.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+54;Find the median of this set of numbers.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+55;Calculate the sales tax on this purchase.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+56;Convert this number from inches to centimeters.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+57;How to calculate 12*2+121*7?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+58;Convert 12 degree Celsius to Fahrenheit.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+59;"Translate ""Ti amo"" to English.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+60;"""Happy new year"" in Vietnamese.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+61;"""Beware of the pickpockets"" in Japanese.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+62;"""Take care of yourself"" in Chinese.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+63;"""What a nice weather""in French.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+64;"""Please give me 5 dollar"" in Russian.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+65;Translate this text message from Portuguese to English.;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+66;Youtube;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+67;Instagram;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+68;Golden Globes 2023 Nominees;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+69;Queen of the Cannes Film Festival;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+70;Noble Laureates;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+71;Fields medalists;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+72;World Cup winner;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+73;How to post this pic on Instagram?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+74;Follow this account on Twitter.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+75;Check my Pinterest for new ideas.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+76;How to make a TikTok video?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+77;I need to update my LinkedIn profile.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+78;Update Snapchat for new stories.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+79;Hey Siri, update all the applications on cellphone.;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+80;Hey Siri, what is the schedule today?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+81;How are you?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+82;How old are you?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+83;How's it going?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+84;How do you do?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+85;What is your plan for this summer holiday?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+86;I'm coming.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+87;I'll be arriving home in 5 minutes.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+88;Call me back this afternoon.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+89;Get up honey, it's going to be late.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+90;Can you pick up some milk on your way home?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+91;Hey, I'm gonna be working late tonight.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+92;Don't forget to take out the trash tonight before bed.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+93;Submit project proposal by end of day Friday.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+94;Parent-teacher conference is next Wednesday at 3pm.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+95;Conference call with team at 10am tomorrow morning.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+96;Don't forget to turn off the stove before leaving the house.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+97;Renew your driver's license before it expires next month.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+98;I'm trying to expand my music taste.;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+99;Have you listened to the newest album of Coldplay?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+100;Play a country music.;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+101;I'm loving the new single from Adam.;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+102;I just saw Justin in concert.;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+103;I just discovered this amazing band.;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+104;What time do we leave school?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+105;Give me the result of the 5*3+2 calculation.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+106;www.;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+107;Beijing has snow, the temperature ranges from -5 to -1 degrees Celsius;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+108;Don't forget we have an appointment tomorrow afternoon.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+109;Please contact xuanlong@umich.edu if you are interested in the PhD program at the University of Michigan.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+110;How to block account of a person in fb;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+111;With a situation like this, what time will we start?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+112;google;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+113;If we upgrade this function, we will see the map of our allies.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+114;What is the integral of the sin(x)/x function?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+115;Do you remember what time we start the examination?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+116;What is your phone number?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+117;Next Saturday (January 28, 2023), we will begin preparations for the ceremony.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+118;Hey Siri, set an alarm for 8 AM;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+119;At 12 o'clock corner there is an enemy base.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+120;Call the hotline 3134 if you have any questions.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+121;Hanoi has showers and thunderstorms in some places, in the afternoon it is cloudy and sunny.;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+122;How to update story in facebook;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+123;Please contact the email address scolarite.1a-2a@polytechnique.fr if you wish to change courses.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+124;Hey Siri, who is pitching for Detroit this season?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+125;What time is it?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+126;"""Vous avez besoin d'aide?"" in English.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+127;Hi Mathew, how are you?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+128;It is very difficult to find your location on google maps.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+129;https:;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+130;What's today? Which day is this today?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+131;Please open google translate. ;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+132;The test will take place on February 14, 2023.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+133;What is the primitive of the function e^x?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+134;Don't forget to wake up at 4 o'clock.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+135;overleaf;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+136;Don't forget to submit your assignment before 11:59pm.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+137;We start at 8:30.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+138;Play my favorite song. ;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+139;Don't forget to ask for the teacher's email address!;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+140;Wake up, it's 8 o'clock, go to class.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+141;Today is March 12, 2019.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+142;"Translate the following sentence into German: ""What time do you have lunch?""";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+143;gg;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+144;Is the weather nice in Paris today?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+145;Remember to buy gifts for teachers.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+146;The surgery was carried out at 7:30 a.m. yesterday.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+147;Who is the author of this song?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+148;What's your email address?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+149;Vietnam received a historic flood, with the largest recorded rainfall in the past 20 years.;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+150;Have you eat?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+151;Remember to memorize the new vocabulary.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+152;google;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+153;We have a meeting at 14:30, don't be late.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+154;Sorry for bothering you.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+155;My teacher's email address is thierry.bodineau@polytechnique.edu.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+156;The wedding ceremony will take place next Sunday, January 15, 2023.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+157;1000 euros is equal to how many dollars?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+158;Gmail;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+159;Hey siri, call Sara;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+160;Is it raining outside?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+161;Hey siri, open google;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+162;Email me benjamin.doerr@polytechnique.edu if you would like more information about the course.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+163;Hurry up, submission deadline is 11:59pm tomorrow.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+164;"""Do you like me?"" in Chinese.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+165;Call 113 if you find a fire.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+166;Show the lyric of this song. ;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+167;How much is 5/0?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+168;Show me where the enemy is.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+169;Hey Siri, share my ETA with Vera;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+170;I love you. ;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+171;Buy 100 more gold to see the enemy map.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+172;Don't forget to exercise at 5 o'clock.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+173;If you would like a bill, email sandrine.busolin@polytechnique.edu.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+174;What time is it in Paris?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+175;Please call me at 5pm if I'm still sleeping.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+176;"""What's the weather like today?"" in Russian.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+177;My phone number is 0123456213.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+178;Hey Siri, play something upbeat;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+179;How to upload a image in ínsta;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+180;Play a famous rock song. ;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+181;Today is colder than yesterday, it must be snowing.;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+182;How to delete a story in fb?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+183;How to quickly calculate 4.129*5+5.871*5?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+184;how to ;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+185;His location on the map is in the northwest corner, immediately send the catapult there.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+186;"""How are you?"" in French.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+187;Do you remember the lyric?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+188;Rome is very sunny these days.;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+189;Do not forget to take the medicine after eating.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+190;The phone area code for France is +33.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+191;Unfriend a person in fb;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+192;My birthday is October 1, 1949.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+193;Hurry up, check in.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+194;"""I'm very happy!"" in Japanese.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+195;Calculate the derivative of the function cos(x).;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+196;The storm began to hit the eastern United States.;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+197;I'm busy, I'll call back later.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+198;The most famous music band. ;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+199;Paris is poorly drawn on the map.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+200;Remember to buy things for your parents.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+201;Hey Siri, set a pizza timer for 12 minutes. ;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+202;The parade will be held on July 14.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+203;Do you remember his phone number?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+204;How to check who frequently view your profile in fb?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+205;"Translate the following sentence into French: ""What time do you wake up today?""";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+206;This is our battle map.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+207;Make a short clip in tiktok;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+208;Hey Siri, play ocean sounds;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+209;Solve the equation x^5+x+1=0.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+210;Turn off the phone, and call his number, 0134712631.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+211;See you at 10 o'clock at the basketball court.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+212;It took me a long time to get his email address: thomas.ghibaudo@polytechnique.edu.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+213;Make clip with youtube;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+214;Don't forget to text 1234 to receive the program's gifts.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+215;Please share me this music. ;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+216;This tune is very familiar.;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+217;How cold is it at this time of year?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+218;Can I go camping today?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+219;When do the snowplows start running?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+220;What time of year is the coldest?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+221;What is the average temperature during winter?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+222;When will it snow most heavily?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+223;What months have the most rain?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+224;What is the forecast for the week in New York?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+225;How many inches of snow will we get this month in Toronto?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+226;How hot is it in July?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+227;What is the humidity like during the rainy season?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+228;How many hours of sunlight are there during spring?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+229;What is the high temperature in August?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+230;How much time can I get on this assignment?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+231;When do I need to be home?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+232;What time of day is best to get a good deal?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+233;Do I have enough time for a cup of coffee before my meeting?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+234;How long is all of this going to take?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+235;When do I need to be there to finish this on time?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+236;Show me the time in New York now.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+237;Set up an alarm clock for tomorrow morning.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+238;When is the best time for me to take a break?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+239;When will the meeting start?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+240;When do I need to go to bed?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+241;When can I eat dinner?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+242;When am I going to be home for Thanksgiving dinner?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+243;What is today's date?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+244;What is the season?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+245;How many weeks until summer?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+246;What day is the birthday of my girlfriend?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+247;How much time until Christmas?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+248;What day is the next holiday?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+249;When is the best time for me to pay rent?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+250;What month has the most days during the school year?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+251;What part of the year does the harvest happen?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+252;How far is it to town?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+253;Where is my favorite part of town?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+254;How far do I need to walk to get here?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+255;How long does it take to get to school from here?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+256;How many blocks away do I live from the restaurant called “川江号子”?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+257;Where is the nearest supermarket?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+258;How far do I need to drive out to find a farm?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+259;Where is the nearest hiking trail?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+260;Where is the nearest public library in our town?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+261;What is the name of the supermarket on 16th Street?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+262;What is the address for the school office?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+263;When did I last make a phone call with my parents?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+264;How long does it take me to call my friend Bob?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+265;Which time of day is best to talk to my parents on the phone?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+266;How much time do I spend talking on the phone on a normal day?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+267;Did I miss some phone calls this week?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+268;How many times did I make a phone call with my girlfriend today?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+269;Did I have the phone number of Maximum.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+270;Give me the phone number of my father.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+271;When did I last write an email to my friend Amie?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+272;What time of day is the best time to send an email to my mathematics professor?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+273;How much time do I spend checking emails?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+274;What day of the week do I usually write emails?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+275;How much time do I spend reading emails?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+276;Who do I email the most often?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+277;What is the email address of my favorite coworker to send a thank-you email to?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+278;What’s the date and specific demandes about the interview by Janestreet by email?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+279;What’s the result of my stage in BCG?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+280;Are there any new emails today?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+281;Write an email to my economics professor for being absent this afternoon.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+282;What is the result of 7 times 585.6?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+283;Show me how much money all of this costs.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+284;Tell me the average of the grades in my class.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+285;Show me this number in decimal number please.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+286;Tell me how much money I should pay in US dollars.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+287;What is my average cost for meals in the last week?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+288;What is the variance of the cost in clothes last year?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+289;Show me the average production cost in the last ten years. ;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+290;How can I say hello in Chinese?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+291;What is the meaning of “démocratie” in Chinese?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+292;Translate this phrase in French.;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+293;Show me what this means in Chinese.;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+294;I have a Chinese friend and I want to say happy new year in Chinese.;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+295;How can I recommend some traditional Chinese Festivals to foreigners?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+296;Translate this poem into French.;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+297;What is the name of Gandhi in Chinese.;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+298;What is the best platform for a professional email?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+299;How do I separate which emails are professional and personal?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+300;Should I use different email systems for different purposes?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+301;What does a standard day's worth of phone calls look like?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+302;What are the steps to make an important phone call?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+303;What should I do before calling someone new?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+304;What makes a phone call successful?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+305;How should I answer a phone call from a potential employer?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+306;How would I answer an unexpected phone call from someone important?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+307;What is the best way to start a text conversation?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+308;What is the hottest news on facebook?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+309;What did President Biden say on twitter yesterday?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+310;Check if there are any new messengers on whatsapp.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+311;What is new with my friend Xiaoyu on wechat?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+312;What is new in the telegram group “X2021”?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+313;Show me the latest post of Xiaoming on Ins.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+314;Show me the possible position of stage in the facebook group “X2021”;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+315;Are there any outside activity in January in the facebook group “X-Chine”;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+316;How did you spend your day?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+317;That's my advice! ;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+318;So, try your best to look forward to your next chance. ;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+319;I'm not perfect, and you shouldn't expect me to be.;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+320;I completely understand!;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+321;I like to comfort people, especially if they need it.;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+322;I was glad to help you.;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+323;I'm just a person, and I'm learning all the time!;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+324;It's a difficult language, even for native speakers.;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+325;How are you doing today?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+326;What are you doing this weekend?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+327;Are you having a good day?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+328;What’s your favorite food?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+329;What’s your favorite TV show?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+330;How is your family? ;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+331;What kind of hobbies do you have?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+332;Do you have pets?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+333;What is the most difficult part of your day?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+334;Tell me if I need to respond to a text message.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+335;Tell me if someone needs me now.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+336;Delete the scam message.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+337;How many scam messages did I receive this week?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+338;Regarde this number as forbidden.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+339;Show me the phone number who sends me the most SMS.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+340;Set up custom alerts for SMS messages from BCG.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+341;Find out the first sms between me and my girlfriend.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+342;What should I do today?;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+343;What is the plan this week?;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+344;Did I have a date this month?;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+345;Remind me that I have a date with Hugo this Friday afternoon.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+346;Remind me that I have to bug toothpaste this evening after work.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+347;Give me the list of shopping this week.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+348;Create a list of things to do for tomorrow.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+349;Write “MAP hw” in the list to do today.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+350;"What are some of the most popular songs of all time, like ""Bohemian Rhapsody"" by Queen or ""I Will Always Love You"" by Whitney Houston?";0;0;0;0;0;0;0;0;0;0;0;0;0;1
+351;How does music by artists like Beethoven or Mozart elicit specific emotions in listeners?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+352;What is the history of genres like Jazz, Blues, or Rock and Roll?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+353;How do artists like Taylor Swift or Ed Sheeran make a living through their music careers?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+354;What is the role of music in events and ceremonies such as weddings or graduations?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+355;How has music by artists like Bob Marley or Nusrat Fateh Ali Khan influenced culture and society?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+356;What are the fundamental elements of music such as melody, harmony, rhythm, and timbre?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+357;How has technology impacted the production and consumption of music by artists like Kendrick Lamar or Björk?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+358;"What is the relationship between music and memory as studied in works like ""The Mozart Effect""?";0;0;0;0;0;0;0;0;0;0;0;0;0;1
+359;How has music evolved over time, from Classical to Pop, Hip-Hop to Electronic ?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+360;What will the weather be like tomorrow ?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+361;Set a timer for 20 minutes.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+362;What's the weather like today?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+363;What's the time?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+364;Set a reminder for me;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+365;Call Mom.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+366;Find directions to the nearest bus station.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+367;Play some music;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+368;What's the news?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+369;Send a message to Fred;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+370;"What's the definition of ""beguiling"" ?";0;0;0;0;0;0;0;0;1;0;0;0;0;0
+371;How do I get to Paris from here?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+372;What's the traffic like on the way to Houston?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+373;Can you tell me a joke?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+374;What's the temperature outside?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+375;Can you convert 3 cups of sugar to grams?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+376;"Can you give me the lyrics of Katy Perry's ""Dark Horse""?";0;0;0;0;0;0;0;0;0;0;0;0;0;1
+377;Can you give me the recipe for brownies?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+378;Can you give me the latest stock market update?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+379;What's the forecast for next Thursday?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+380;Can you set an alarm for 8 am tomorrow?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+381;Can you give me the time in Sidney?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+382;"Can you play ""Mama mia"" by ABBA?";0;0;0;0;0;0;0;0;0;0;0;0;0;1
+383;Show me Elon Musk's latest tweet.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+384;Countdown 50 seconds.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+385;Remind me to send my emails by 10 pm.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+386;What's 0 divided by 0 ?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+387;What's your name ?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+388;"Spell ""revolution"" in Arabic.";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+389;"How do you say ""professor"" in Mandarin ?";0;0;0;0;0;0;0;1;0;0;0;0;0;0
+390;What is the current temperature?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+391;What is the forecast for tomorrow?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+392;Is it going to rain or snow today?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+393;What is the wind speed and direction?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+394;Is there a storm or severe weather warning in effect?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+395;What is the humidity level?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+396;What is the UV index?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+397;What is the air quality like?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+398;What is the temperature going to be like this week?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+399;Is there a chance of thunderstorms in the forecast?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+400;How does the current weather compare to the average for this time of year?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+401;What is the visibility like?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+402;Is there a chance of frost or freeze in the forecast?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+403;What is the barometric pressure?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+404;What is the dew point?;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+405;What time is it?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+406;Set an alarm for 8 pm.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+407;Wake me up in 3 hours.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+408;Snooze my alarm;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+409;Turn off my alarm;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+410;How long until my next alarm?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+411;Set a timer for 6 hours.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+412;Show me my alarm list;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+413;Stop the timer;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+414;Set a reminder for tomorrow morning.;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+415;Show me my reminders;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+416;Create a new calendar event;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+417;Show me my upcoming events;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+418;How much time is left on my timer?;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+419;Set the sleep timer for 7 hours.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+420;Set a world clock for New York.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+421;Show me the time in Mexico.;0;1;0;0;0;0;0;0;0;0;0;0;0;0
+422;What are my upcoming events?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+423;Create a new calendar event for the 8th of June.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+424;What is my schedule for tomorrow ?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+425;Delete tomorrow's event;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+426;Show me the next events from my music calendar.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+427;Send an invite to the party to Tom and Henry.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+428;Accept this invite.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+429;How long until my next event?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+430;Show me my upcoming birthdays;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+431;Add a new calendar from URL.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+432;Show me my calendar for the month.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+433;What is the date ?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+434;What is the time remaining for my current event?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+435;Show me the location of Friday's event.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+436;Show me my completed events;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+437;Schedule a meeting with my work group.;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+438;Show me my declined events;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+439;What are my busy times this week ?;0;0;1;0;0;0;0;0;0;0;0;0;0;0
+440;How do I get to Lyon?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+441;What is the best route to Perth ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+442;What are some nearby touristic attractions ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+443;What is the current traffic like on the way to San Francisco ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+444;Can you give me walking directions to ENSTA Paris ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+445;Can you give me biking directions to McDonald's ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+446;How long will it take to get to New Delhi ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+447;Can you show me the map of Yellowstone Park ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+448;What are the hours of the Louvre museum ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+449;Is there a gas station near me ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+450;Can you give me public transportation directions to Charles de Gaulle Airport?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+451;Can you find me a hotel near the Eiffel Tower?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+452;Can you give me directions to the nearest shopping center?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+453;Can you give me turn-by-turn directions to NASA HQ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+454;Can you give me an estimated time of arrival for this trip ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+455;What's the address of the Electra Metropolis Hotel ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+456;Can you show me the satellite view of Dubai ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+457;Can you give me the phone number for Amplitude Studios ?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+458;Can you find me a parking spot near the train station ?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+459;Call 01234567;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+460;FaceTime Alex.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+461;Send a message to Dad.;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+462;Read my new messages;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+463;Play my voicemail.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+464;Do I have any missed calls?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+465;Redial the last number called.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+466;Add Mary to my contacts.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+467;Block the last caller.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+468;What's the phone number for Ecole Polytechnique?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+469;Search for Sam in my contacts.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+470;What's the call history for the last week?;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+471;Forward my calls to 09876543.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+472;Set up a conference call with Mary, Tom, Andrew and Daphne.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+473;Turn on Do Not Disturb.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+474;Turn off Do Not Disturb.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+475;Mute my call.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+476;Put my call on hold.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+477;End my call.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+478;Send Emily my location.;0;0;0;0;1;0;0;0;0;0;0;0;0;0
+479;Check my email.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+480;Read my new emails.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+481;Send an email to example@gmail.com.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+482;Reply to this email.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+483;Forward this email to rand.teach@stanford.edu.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+484;Move this email to Spam.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+485;Delete this email.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+486;Mark this email as read.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+487;Mark this email as unread.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+488;What's the subject of this email?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+489;Who sent this email?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+490;"Search my email for ""deadline"".";0;0;0;0;0;1;0;0;0;0;0;0;0;0
+491;Create a new email with Mary.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+492;Add this.person@yahoo.fr to my contacts.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+493;Unsubscribe from this mailing list.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+494;Find all emails from Thomas Jefferson.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+495;What are my upcoming email meetings?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+496;Create a new email folder.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+497;Archive this email.;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+498;What are my unread emails?;0;0;0;0;0;1;0;0;0;0;0;0;0;0
+499;What is 23-7*(5-3) ?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+500;Add 7546 and 4509.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+501;Subtract 837 from 5359.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+502;Multiply 654 by 37.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+503;Divide 685 by 5.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+504;Square 14.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+505;Square root of 421.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+506;Cube 13.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+507;Cube root of 678.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+508;Convert 12 miles to km.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+509;Calculate the tip for a 84,34 dollar bill at 10 percent.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+510;What is 12 percent of 4563?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+511;Find the slope of the line that goes through the points (5, 3) and (1, 1).;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+512;Solve the equation x^2-x-1.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+513;Calculate the area of a circle with radius of length 2.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+514;Calculate the volume of a cube with side of length 1,2 .;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+515;Calculate the perimeter of a rectangle with length 3 and width 1,5.;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+516;Calculate the distance between (3,4) and (5,2).;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+517;What is the factorial of 7?;0;0;0;0;0;0;1;0;0;0;0;0;0;0
+518;"Calculate the standard deviation of [14 ; 25 ; 32 ; 46 ; 5 ; 18 ; 49].";0;0;0;0;0;0;1;0;0;0;0;0;0;0
+519;Translate 'How are you?' to French.;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+520;What does 'Guten Morgen' mean in English?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+521;How do you say 'apple' in Spanish?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+522;Can you read this Chinese text?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+523;What language is this?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+524;Translate this text to English.;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+525;What is the opposite word of 'big' in German?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+526;Can you translate my speech to Japanese?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+527;What is the Italian word for 'book'?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+528;Can you translate this webpage to Arabic?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+529;Can you help me with this language homework?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+530;Can you translate this menu to Portuguese?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+531;Can you help me with pronunciation for this Spanish word 'casa'?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+532;Can you translate this document to Russian?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+533;Can you give me the translation for this phrase 'Bonjour' in English?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+534;Can you translate this image with text to Hindi?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+535;Can you give me some examples of how to use the word 'amazing' in a sentence?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+536;Can you help me to practice my French speaking skills?;0;0;0;0;0;0;0;1;0;0;0;0;0;0
+537;Search for the best pizza near me.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+538;Google the latest iPhone model.;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+539;Look up the current weather.;1;0;0;0;0;0;0;0;0;0;0;0;0;0
+540;Find the nearest gas station.;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+541;Find information on the history of the internet.;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+542;What is the stock market?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+543;Who is the president of France?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+544;Where is the Eiffel tower located?;0;0;0;1;0;0;0;0;0;0;0;0;0;0
+545;Define the word 'antidisestablishmentarianism'.;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+546;How do I change a flat tire?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+547;What are some reviews for the movie 'Jurassic Park'?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+548;What are some news articles about COVID-19?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+549;What are the top results for 'best laptop' ?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+550;What are some images of the Grand Canyon?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+551;Can you show me videos of how to make sushi?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+552;What are some websites about learning to code?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+553;What are some books about personal finance?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+554;What are some podcasts about true crime?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+555;Can you give me some statistics on the GDP of the US?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+556;What are some quotes about leadership?;0;0;0;0;0;0;0;0;1;0;0;0;0;0
+557;Post 'Going for a run' to Facebook.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+558;Upload a photo to Instagram.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+559;Update my LinkedIn status.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+560;What are my latest twitter notifications?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+561;Send a WhatsApp message to John.;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+562;What are my Instagram friend's latest posts?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+563;What is the latest trend on TikTok?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+564;How many LinkedIn followers do I have?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+565;Can you help me create a Twitter account?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+566;What are some popular Pinterest pages about home decor?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+567;Can you show me my Snapchat profile?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+568;Can you send a friend request to Sarah on Facebook?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+569;Can you help me to increase my TikTok engagement?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+570;Can you show me how to change my Instagram privacy settings?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+571;Can you help me to schedule my Twitter post?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+572;Can you give me suggestions on how to improve my LinkedIn profile?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+573;Can you give me a list of my Facebook friends?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+574;Can you show me the analytics for my Instagram page?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+575;Can you give me a list of my WhatsApp groups?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+576;Can you show me the insights for my TikTok posts?;0;0;0;0;0;0;0;0;0;1;0;0;0;0
+577;How are you?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+578;What's new?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+579;Tell me a joke.;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+580;What's your name?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+581;How old are you?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+582;What's your favorite color?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+583;What's your favorite movie?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+584;What's your favorite book?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+585;What's your favorite song?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+586;What's your favorite TV show?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+587;What's your favorite food?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+588;What's your favorite hobby?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+589;What's your favorite place to visit?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+590;What's your favorite thing to do?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+591;What's your favorite animal?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+592;What's your favorite thing about your job?;0;0;0;0;0;0;0;0;0;0;1;0;0;0
+593;Can you read my latest text message?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+594;Can you send a text message to John?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+595;Can you send a message to Sarah on WhatsApp?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+596;Can you send a message to my mom on Facebook messenger?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+597;Can you read my latest iMessage?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+598;Can you send a message to my dad on WeChat?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+599;Can you send a message to my friend on WeChat?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+600;Can you show me all my unread messages?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+601;Can you search for a message from Sarah?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+602;Can you mark the message from John as read?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+603;Can you message my contact on Snapchat?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+604;Can you search for a message from my contact?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+605;Can you send a message to my group chat on iMessage?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+606;Can you send a message to my work chat on Slack?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+607;Can you message my friend on Instagram?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+608;Can you send a message to my friend on LinkedIn?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+609;Can you message my friend on Snapchat?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+610;Can you send a message to my contact tomorrow at 2 PM?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+611;Can you read my last message on WhatsApp?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+612;Can you forward the message I received yesterday to my email?;0;0;0;0;0;0;0;0;0;0;0;1;0;0
+613;Create a new reminder;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+614;Set a reminder to call John at 3 PM;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+615;Remind me to buy milk at 5 PM;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+616;Show me all my upcoming reminders;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+617;Mark the reminder to take out the trash as complete;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+618;Set a location-based reminder for when I leave work;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+619;Schedule a weekly reminder for me to call my mom;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+620;Search for all my reminders about groceries;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+621;Set a reminder for me to take my medication at 8 AM;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+622;Set a reminder for me to buy a birthday gift for my friend;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+623;Set a reminder for me to submit my project on Friday;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+624;Set a reminder for me to renew my passport next month;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+625;Set a reminder for me to schedule a doctor's appointment;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+626;Show me all my completed reminders;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+627;Delete the reminder to pick up dry cleaning;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+628;Set a reminder for me to water my plants every Monday;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+629;Set a reminder for me to attend the meeting at 2 PM;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+630;Set a reminder for me to book a flight for next weekend;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+631;Set a reminder for me to pack for my trip next week;0;0;0;0;0;0;0;0;0;0;0;0;1;0
+632;Play music by Taylor Swift;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+633;Shuffle my music;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+634;"Add ""Shape of You"" to my party playlist";0;0;0;0;0;0;0;0;0;0;0;0;0;1
+635;What song is currently playing?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+636;Play Jazz music;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+637;Play my workout playlist;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+638;Increase volume;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+639;Decrease volume;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+640;Pause music;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+641;Play music;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+642;Skip to the next song;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+643;Skip to the previous song;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+644;What album is this song from ?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+645;Who is the artist of this song ?;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+646;Play music from the 80's;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+647;Search for a specific song on Spotify;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+648;Repeat the current song;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+649;Play music on shuffle;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+650;Add this album to my library;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+651;Create a new playlist;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+652;Show me my recently played songs;0;0;0;0;0;0;0;0;0;0;0;0;0;1
+653;Play music according to my mood.;0;0;0;0;0;0;0;0;0;0;0;0;0;1
