@@ -6,5 +6,4 @@ matplotlib
 requests
 gsheetsdb
 shillelagh
-shillelagh[gsheetsapi]
-shillelagh[datasetteapi]
+shillelagh[all]
