@@ -130,7 +130,7 @@ st.write(df)
 
 if user_input:
     st.write(1)
-    cursor.execute(f'INSERT INTO "{sheet_url}" VALUES ({user_input},default)')
+    cursor.execute(f'INSERT INTO "{sheet_url}" VALUES ("{user_input}","default")')
     st.write(2)
     rows = cursor.execute(f'SELECT * FROM "{sheet_url}"')
     st.write(3)
