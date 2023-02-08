@@ -114,7 +114,7 @@ if user_input and button:
         ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
         st.pyplot(fig)
 
-    with open(url,'w') as fp:
+    with open(url,'a') as fp:
         st.write(user_input)
         fp.write(user_input + "\n")
         st.write("Written!")
