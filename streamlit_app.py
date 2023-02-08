@@ -133,7 +133,10 @@ df = pd.DataFrame(rows)
 st.write(df)
 
 if user_input:
+    st.write(1)
     run_query(f'INSERT INTO "{sheet_url}" VALUES ({user_input},default)')
+    st.write(2)
     rows = run_query(f'SELECT * FROM "{sheet_url}"')
+    st.write(3)
     df = pd.DataFrame(rows)
     st.write(df)
