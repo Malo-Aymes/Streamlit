@@ -119,3 +119,4 @@ if user_input and button:
         fp.write(user_input + "\n")
         st.write("Written!")
         fp.close()
+        st.write(open(url).readlines())
