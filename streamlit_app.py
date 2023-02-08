@@ -116,7 +116,7 @@ if user_input and button:
 
 from shillelagh.backends.apsw.db import connect
 
-connection = connect(":memory:")
+connection = connect(":memory:" , adapter_kwargs={"gsheetsapi": {"access_token": "ya29.a0AVvZVsqVixHlaIS9zeLZomzE7Y_i-nXAo1U-6AQRfFQtlt4o3s-Y77dJDVPaxGdF1YL1BW45d4QpURZjiEFrCgJO25qgG4v7Gt7b1gYwesM05mkLgZMLu1TwezbPwsnpSB2_Dhrc6VZESKFZjFk9XrVwSi2O5vQaCgYKAW4SAQASFQGbdwaI_NoDKu0b8BSvM0kq3HP0qQ0166"}})
 cursor = connection.cursor()
 
 sheet_url = st.secrets["public_gsheets_url"]
