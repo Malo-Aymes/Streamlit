@@ -122,7 +122,7 @@ cursor = connection.cursor()
 sheet_url = st.secrets["public_gsheets_url"]
 st.write(sheet_url)
 
-query = 'SELECT * FROM "{sheet_url}"'
+query = f'SELECT * FROM "{sheet_url}"'
 rows = cursor.execute(query)
 
 df = pd.DataFrame(rows)
