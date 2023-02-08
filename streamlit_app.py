@@ -129,5 +129,5 @@ sheet_url = st.secrets["public_gsheets_url"]
 st.write(sheet_url)
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-df = pd.Dataframe(rows)
+df = pd.DataFrame(rows)
 st.write(df)
