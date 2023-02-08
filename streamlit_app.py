@@ -114,29 +114,25 @@ if user_input and button:
         
         
 
-# Create a connection object.
-conn = connect()
+rom shillelagh.backends.apsw.db import connect
 
-# Perform SQL query on the Google Sheet.
-# Uses st.cache to only rerun when the query changes or after 10 min.
-@st.cache(ttl=600)
-def run_query(query):
-    rows = conn.execute(query, headers=1)
-    rows = rows.fetchall()
-    return rows
+connection = connect()
+cursor = connection.cursor()
 
 sheet_url = st.secrets["public_gsheets_url"]
 st.write(sheet_url)
-rows = run_query(f'SELECT * FROM "{sheet_url}"')
+
+query = 'SELECT * FROM "{sheet_url}"'
+rows = cursor.execute(query):
 
 df = pd.DataFrame(rows)
 st.write(df)
 
-if user_input:
+"""if user_input:
     st.write(1)
     run_query(f'INSERT INTO "{sheet_url}" VALUES ({user_input},default)')
     st.write(2)
     rows = run_query(f'SELECT * FROM "{sheet_url}"')
     st.write(3)
     df = pd.DataFrame(rows)
-    st.write(df)
+    st.write(df)"""
