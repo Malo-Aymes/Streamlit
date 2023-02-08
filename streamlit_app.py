@@ -132,7 +132,8 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 df = pd.DataFrame(rows)
 st.write(df)
 
-run_query(f'INSERT INTO "{sheet_url}" VALUES ({user_input},default)')
-rows = run_query(f'SELECT * FROM "{sheet_url}"')
-df = pd.DataFrame(rows)
-st.write(df)
+if user_input:
+    run_query(f'INSERT INTO "{sheet_url}" VALUES ({user_input},default)')
+    rows = run_query(f'SELECT * FROM "{sheet_url}"')
+    df = pd.DataFrame(rows)
+    st.write(df)
