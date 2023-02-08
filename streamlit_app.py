@@ -82,6 +82,8 @@ model.config.label2id = label2id
 
 #Input
 
+url = 'test.txt'
+
 user_input = st.text_area("Enter sentence to classify :")
 button = st.button("Classify")
 values = st.checkbox("Show values")
@@ -110,3 +112,6 @@ if user_input and button:
         # ax.bar_label(hbars, fmt='%.2f')
         ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
         st.pyplot(fig)
+
+    with open(url,'a') as fp:
+        fp.write(user_input)
