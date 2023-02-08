@@ -7,3 +7,4 @@ requests
 gsheetsdb
 shillelagh
 shillelagh[gsheetsapi]
+shillelagh[datasetteapi]
