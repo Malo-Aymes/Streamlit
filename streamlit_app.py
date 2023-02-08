@@ -13,6 +13,7 @@ import requests
 import io
 
 import streamlit as st
+from gsheetsdb import connect
 
 class DistilBertForMultilabelSequenceClassification(DistilBertForSequenceClassification):
     def __init__(self, config):
@@ -82,9 +83,6 @@ model.config.label2id = label2id
 
 #Input
 
-url = 'test.txt'
-st.write(open(url).readlines())
-
 user_input = st.text_area("Enter sentence to classify :")
 button = st.button("Classify")
 values = st.checkbox("Show values")
@@ -113,10 +111,23 @@ if user_input and button:
         # ax.bar_label(hbars, fmt='%.2f')
         ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
         st.pyplot(fig)
+        
+        
 
-    with open(url,'a') as fp:
-        st.write(user_input)
-        fp.write(user_input + "\n")
-        st.write("Written!")
-        fp.close()
-        st.write(open(url).readlines())
+# Create a connection object.
+conn = connect()
+
+# Perform SQL query on the Google Sheet.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+@st.cache(ttl=600)
+def run_query(query):
+    rows = conn.execute(query, headers=1)
+    rows = rows.fetchall()
+    return rows
+
+sheet_url = st.secrets["public_gsheets_url"]
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
+
+# Print results.
+for row in rows:
+    st.write(f"{row.name} has a :{row.pet}:")
