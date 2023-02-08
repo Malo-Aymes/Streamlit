@@ -5,3 +5,5 @@ panda
 matplotlib
 requests
 gsheetsdb
+shillelagh
+shillelagh[gsheetsapi]
