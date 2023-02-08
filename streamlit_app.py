@@ -114,7 +114,7 @@ if user_input and button:
         
         
 
-rom shillelagh.backends.apsw.db import connect
+from shillelagh.backends.apsw.db import connect
 
 connection = connect()
 cursor = connection.cursor()
