@@ -117,7 +117,7 @@ if user_input and button:
 from shillelagh.backends.apsw.db import connect
 
 connection = connect()
-cursor = connection.cursor()
+cursor = connection.cursor(":memory:")
 
 sheet_url = st.secrets["public_gsheets_url"]
 st.write(sheet_url)
