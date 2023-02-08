@@ -83,6 +83,7 @@ model.config.label2id = label2id
 #Input
 
 url = 'test.txt'
+st.write(open(url).readlines())
 
 user_input = st.text_area("Enter sentence to classify :")
 button = st.button("Classify")
