@@ -111,28 +111,3 @@ if user_input and button:
         # ax.bar_label(hbars, fmt='%.2f')
         ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
         st.pyplot(fig)
-        
-        
-
-from shillelagh.backends.apsw.db import connect
-
-connection = connect(":memory:" , adapter_kwargs={"gsheetsapi": {"access_token": "ya29.a0AVvZVsqVixHlaIS9zeLZomzE7Y_i-nXAo1U-6AQRfFQtlt4o3s-Y77dJDVPaxGdF1YL1BW45d4QpURZjiEFrCgJO25qgG4v7Gt7b1gYwesM05mkLgZMLu1TwezbPwsnpSB2_Dhrc6VZESKFZjFk9XrVwSi2O5vQaCgYKAW4SAQASFQGbdwaI_NoDKu0b8BSvM0kq3HP0qQ0166"}})
-cursor = connection.cursor()
-
-sheet_url = st.secrets["public_gsheets_url"]
-st.write(sheet_url)
-
-query = f'SELECT * FROM "{sheet_url}"'
-rows = cursor.execute(query)
-
-df = pd.DataFrame(rows)
-st.write(df)
-
-if user_input:
-    st.write(1)
-    cursor.execute(f'INSERT INTO "{sheet_url}" VALUES ("{user_input}","default")')
-    st.write(2)
-    rows = cursor.execute(f'SELECT * FROM "{sheet_url}"')
-    st.write(3)
-    df = pd.DataFrame(rows)
-    st.write(df)
