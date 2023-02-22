@@ -4,6 +4,3 @@ numpy
 panda
 matplotlib
 requests
-gsheetsdb
-shillelagh
-shillelagh[all]
