@@ -108,7 +108,7 @@ if is_pressed["pressed"]and user_input:
     output = torch.nn.Softmax(dim=1)(logits[0])
     output = output[0].tolist()
     result = labels[np.argmax(output)]
-    st.write(result)
+    st.markdown(f"<h2 style='text-align: center; color: black;'>{result} </h2>", unsafe_allow_html=True)
 
     if values:
         y_pos = np.arange(len(labels))
