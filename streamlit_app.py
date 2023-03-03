@@ -88,6 +88,10 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 
 #Input
 
+@st.cache(allow_output_mutation=True)
+def satistaction():
+    return {"sat":True}
+
 with st.form(key = 'classify'):
     user_input = st.text_area("Enter sentence to classify :")
     values = st.checkbox("Show values")
@@ -118,16 +122,20 @@ if user_input and button:
 
 
     
-sat = st.checkbox('Do you consider this class to be incorrect ?')
-
-if sat:
-    option = st.selectbox('Correct class :',('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
-else:
+    sat = st.checkbox('Do you consider this class to be incorrect ?')
+    satisfied = satisfaction()
     option = result
-send = st.form_submit_button('Send')
 
-if send:
-    doc_ref = db.collection("classification").document(user_input)
-    doc_ref.set({"text":user_input,"class":option})
-    st.write('Thank you for your input !')
+    if sat:
+        satisfied.update({"sat":False})
+    
+    if not satisfied.sat:
+        option = st.selectbox('Class :', ('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
+    
+    send = st.button("Send")
+    
+    if send:
+        doc_ref = db.collection("classification").document(user_input)
+        doc_ref.set({"text":user_input,"class":option})
+        st.write('Thank you for your input !')
         
