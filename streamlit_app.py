@@ -96,7 +96,7 @@ is_pressed = button_states()  # gets our cached dictionary
 
 user_input = st.text_area("Enter sentence to classify :")
 values = st.checkbox("Show values")
-button = st.form_submit_button("Classify")
+button = st.button("Classify")
 
 if button:
     # any changes need to be performed in place
