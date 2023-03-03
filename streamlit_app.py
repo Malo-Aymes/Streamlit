@@ -89,15 +89,20 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 #Input
 
 @st.cache(allow_output_mutation=True)
-def satisfaction():
-    return {"sat":True}
+def button_states():
+    return {"pressed": None}
 
-with st.form(key = 'classify'):
-    user_input = st.text_area("Enter sentence to classify :")
-    values = st.checkbox("Show values")
-    button = st.form_submit_button("Classify")
+is_pressed = button_states()  # gets our cached dictionary
 
-if user_input and button:
+user_input = st.text_area("Enter sentence to classify :")
+values = st.checkbox("Show values")
+button = st.form_submit_button("Classify")
+
+if button:
+    # any changes need to be performed in place
+    is_pressed.update({"pressed": True})
+
+if is_pressed["pressed"]and user_input:
     input = torch.tensor([tokenizer(user_input)["input_ids"]])
     logits = model(input)[:2]
     output = torch.nn.Softmax(dim=1)(logits[0])
@@ -123,13 +128,9 @@ if user_input and button:
 
     
     sat = st.checkbox('Do you consider this class to be incorrect ?')
-    satisfied = satisfaction()
     option = result
 
     if sat:
-        satisfied.update({"sat":False})
-    
-    if not satisfied["sat"]:
         option = st.selectbox('Class :', ('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
     
     send = st.button("Send")
