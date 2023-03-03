@@ -13,7 +13,7 @@ import requests
 import io
 
 import streamlit as st
-from gsheetsdb import connect
+from google.cloud import firestore
 
 class DistilBertForMultilabelSequenceClassification(DistilBertForSequenceClassification):
     def __init__(self, config):
@@ -81,6 +81,11 @@ label2id = {label:str(i) for i, label in enumerate(labels)}
 model.config.id2label = id2label
 model.config.label2id = label2id
 
+
+#Firestore
+
+db = firestore.Client.from_service_account_json("firestore-key.json")
+
 #Input
 
 user_input = st.text_area("Enter sentence to classify :")
@@ -111,3 +116,12 @@ if user_input and button:
         # ax.bar_label(hbars, fmt='%.2f')
         ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
         st.pyplot(fig)
+    
+    sat = st.checkbox('Do you consider this class to be incorrect ?')
+    if sat:
+        option = st.selectbox('Correct class :',('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
+        send = st.button('Send')
+        if send:
+            doc_ref = db.collection("classification").document(user_input)
+            doc_ref.set({"text":user_input,"class":option})
+        sat = False
