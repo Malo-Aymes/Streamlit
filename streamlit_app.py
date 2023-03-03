@@ -101,27 +101,30 @@ if user_input and button:
     output = output[0].tolist()
     result = labels[np.argmax(output)]
     st.write(result)
-
-    if values:
-        y_pos = np.arange(len(labels))
-        width = 0.5
-        fig, ax = plt.subplots()
-        maxl = 0
-        hbars = ax.barh(y_pos , output,width, align='center')
-        maxl = max(maxl,max(output))
-        ax.set_yticks(y_pos, labels=labels)
-        ax.invert_yaxis()  # labels read top-to-bottom
-        ax.legend()
-        # Label with specially formatted floats
-        # ax.bar_label(hbars, fmt='%.2f')
-        ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
-        st.pyplot(fig)
     
     sat = st.checkbox('Do you consider this class to be incorrect ?')
-    if sat:
-        option = st.selectbox('Correct class :',('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
-        send = st.button('Send')
-        if send:
-            doc_ref = db.collection("classification").document(user_input)
-            doc_ref.set({"text":user_input,"class":option})
-            st.write('Thank you for your input !')
+
+if user_input and button and values:
+    y_pos = np.arange(len(labels))
+    width = 0.5
+    fig, ax = plt.subplots()
+    maxl = 0
+    hbars = ax.barh(y_pos , output,width, align='center')
+    maxl = max(maxl,max(output))
+    ax.set_yticks(y_pos, labels=labels)
+    ax.invert_yaxis()  # labels read top-to-bottom
+    ax.legend()
+    # Label with specially formatted floats
+    # ax.bar_label(hbars, fmt='%.2f')
+    ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
+    st.pyplot(fig)
+    
+    
+    
+if sat:
+    option = st.selectbox('Correct class :',('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
+    send = st.button('Send')
+    if send:
+        doc_ref = db.collection("classification").document(user_input)
+        doc_ref.set({"text":user_input,"class":option})
+        st.write('Thank you for your input !')
