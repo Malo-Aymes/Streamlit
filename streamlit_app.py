@@ -127,7 +127,7 @@ if is_pressed["pressed"]and user_input:
 
 
     
-    sat = st.checkbox('Do you consider this class to be incorrect ?')
+    sat = st.checkbox('Is this incorrect ?')
     option = result
 
     if sat:
