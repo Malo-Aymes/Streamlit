@@ -124,5 +124,4 @@ if user_input and button:
         if send:
             doc_ref = db.collection("classification").document(user_input)
             doc_ref.set({"text":user_input,"class":option})
-            sat = False
             st.write('Thank you for your input !')
