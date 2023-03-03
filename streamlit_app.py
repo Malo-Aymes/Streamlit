@@ -129,7 +129,7 @@ if user_input and button:
     if sat:
         satisfied.update({"sat":False})
     
-    if not satisfied.sat:
+    if not satisfied["sat"]:
         option = st.selectbox('Class :', ('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
     
     send = st.button("Send")
