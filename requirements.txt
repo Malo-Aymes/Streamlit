@@ -4,3 +4,4 @@ numpy
 panda
 matplotlib
 requests
+google.cloud
