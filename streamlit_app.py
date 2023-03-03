@@ -88,11 +88,10 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 
 #Input
 
-user_input = st.text_area("Enter sentence to classify :")
-button = st.button("Classify")
-values = st.checkbox("Show values")
-
-
+with st.form(key = 'classify'):
+    user_input = st.text_area("Enter sentence to classify :")
+    button = st.button("Classify")
+    values = st.checkbox("Show values")
 
 if user_input and button:
     input = torch.tensor([tokenizer(user_input)["input_ids"]])
@@ -104,27 +103,27 @@ if user_input and button:
     
     sat = st.checkbox('Do you consider this class to be incorrect ?')
 
-if user_input and button and values:
-    y_pos = np.arange(len(labels))
-    width = 0.5
-    fig, ax = plt.subplots()
-    maxl = 0
-    hbars = ax.barh(y_pos , output,width, align='center')
-    maxl = max(maxl,max(output))
-    ax.set_yticks(y_pos, labels=labels)
-    ax.invert_yaxis()  # labels read top-to-bottom
-    ax.legend()
-    # Label with specially formatted floats
-    # ax.bar_label(hbars, fmt='%.2f')
-    ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
-    st.pyplot(fig)
-    
-    
-    
-if sat:
-    option = st.selectbox('Correct class :',('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
-    send = st.button('Send')
-    if send:
-        doc_ref = db.collection("classification").document(user_input)
-        doc_ref.set({"text":user_input,"class":option})
-        st.write('Thank you for your input !')
+    if values:
+        y_pos = np.arange(len(labels))
+        width = 0.5
+        fig, ax = plt.subplots()
+        maxl = 0
+        hbars = ax.barh(y_pos , output,width, align='center')
+        maxl = max(maxl,max(output))
+        ax.set_yticks(y_pos, labels=labels)
+        ax.invert_yaxis()  # labels read top-to-bottom
+        ax.legend()
+        # Label with specially formatted floats
+        # ax.bar_label(hbars, fmt='%.2f')
+        ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
+        st.pyplot(fig)
+
+
+
+    if sat:
+        option = st.selectbox('Correct class :',('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
+        send = st.button('Send')
+        if send:
+            doc_ref = db.collection("classification").document(user_input)
+            doc_ref.set({"text":user_input,"class":option})
+            st.write('Thank you for your input !')
