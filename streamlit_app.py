@@ -89,7 +89,7 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 #Input
 
 @st.cache(allow_output_mutation=True)
-def satistaction():
+def satisfaction():
     return {"sat":True}
 
 with st.form(key = 'classify'):
