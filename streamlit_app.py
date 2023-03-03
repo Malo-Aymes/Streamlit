@@ -117,17 +117,17 @@ if user_input and button:
         st.pyplot(fig)
 
 
-    with st.form(key="correct"):
-        sat = st.checkbox('Do you consider this class to be incorrect ?')
+    
+sat = st.checkbox('Do you consider this class to be incorrect ?')
 
-        if sat:
-            option = st.selectbox('Correct class :',('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
-        else:
-            option = result
-        send = st.form_submit_button('Send')
-        
-    if send:
-        doc_ref = db.collection("classification").document(user_input)
-        doc_ref.set({"text":user_input,"class":option})
-        st.write('Thank you for your input !')
+if sat:
+    option = st.selectbox('Correct class :',('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
+else:
+    option = result
+send = st.form_submit_button('Send')
+
+if send:
+    doc_ref = db.collection("classification").document(user_input)
+    doc_ref.set({"text":user_input,"class":option})
+    st.write('Thank you for your input !')
         
