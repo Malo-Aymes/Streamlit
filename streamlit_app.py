@@ -127,15 +127,15 @@ if is_pressed["pressed"]and user_input:
 
 
     
-    sat = st.checkbox('Is this incorrect ?')
-    option = result
+    sat = st.radio('Is this correct ?' , ('Yes','No'))
 
-    if sat:
+    if sat=='No':
         option = st.selectbox('Class :', ('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
-    
+    else:
+        option = result
     send = st.button("Send")
     
-    if send:
+    if send and sat!=None :
         doc_ref = db.collection("classification").document(user_input)
         doc_ref.set({"text":user_input,"class":option})
         st.write('Thank you for your input !')
