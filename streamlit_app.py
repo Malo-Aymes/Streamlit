@@ -90,8 +90,8 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 
 with st.form(key = 'classify'):
     user_input = st.text_area("Enter sentence to classify :")
-    button = st.button("Classify")
     values = st.checkbox("Show values")
+    button = st.form_submit_button("Classify")
 
 if user_input and button:
     input = torch.tensor([tokenizer(user_input)["input_ids"]])
