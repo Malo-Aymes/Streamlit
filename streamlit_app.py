@@ -6,14 +6,13 @@ import transformers
 import torch
 import pandas as pd
 import numpy as np
-from transformers import (AutoTokenizer, DistilBertForSequenceClassification)
+from transformers import (AutoTokenizer, DistilBertForSequenceClassification,AutoModelForQuestionAnswering)
 from transformers.modeling_outputs import SequenceClassifierOutput
 import matplotlib.pyplot as plt
 import requests
 import io
 
 import streamlit as st
-from google.cloud import firestore
 
 class DistilBertForMultilabelSequenceClassification(DistilBertForSequenceClassification):
     def __init__(self, config):
@@ -61,16 +60,17 @@ class DistilBertForMultilabelSequenceClassification(DistilBertForSequenceClassif
 
 #Setup
 
-st.title("Classification : Virtual Assistant")
+st.title("Virtual Assistant")
 
 @st.cache(allow_output_mutation = True)
-def get_model():
+def get_models():
     tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
-    model = DistilBertForMultilabelSequenceClassification.from_pretrained("Deopusi/virtual_assistant_classification",use_auth_token = "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",num_labels=14)
-    return tokenizer,model
+    model_classification = DistilBertForMultilabelSequenceClassification.from_pretrained("Deopusi/virtual_assistant_classification",use_auth_token = "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",num_labels=14)
+    model_extraction = AutoModelForQuestionAnswering.from_pretrained("Deopusi/extraction",use_auth_token = "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")
+    return tokenizer,model_classification,model_extraction
 
 
-tokenizer,model = get_model()
+tokenizer,model_classification,model_extraction = get_models()
 
 
 labels = ['Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music']
@@ -78,65 +78,96 @@ labels = ['Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator',
 id2label = {str(i):label for i, label in enumerate(labels)}
 label2id = {label:str(i) for i, label in enumerate(labels)}
 
-model.config.id2label = id2label
-model.config.label2id = label2id
+model_classification.config.id2label = id2label
+model_classification.config.label2id = label2id
 
+alt_questions = {'Where - Weather':'What is the location ?',
+    'When - Weather':'What is the moment or time of interest ?',
+    'What - Weather':'What do we want to know ?',
+    'Type - Clock':'What function of a clock is to be used ?',
+    'Time - Clock':'What is the time or duration ?',
+    'What - Clock':'What do we want to do or know ?',
+    'Where - Clock':'What is the place we are interested in ?',
+    'When - Calendar':'When are we doing something ?',
+    'What - Calendar':'What is our action in our calendar?',
+    'Event/Person - Calendar':'What event or person are we interested in ?',
+    'Start - Map':'What is our starting point ?',
+    'End - Map':'What is our destination ?',
+    'What - Map':'What are we accessing ?',
+    'Type - Phone':'What function of a phone is to be used ?',
+    'Information - Phone':'What information are we accessing ?',
+    'Who - Phone':'Who is mentioned ?',
+    'Type - Email':'What function of email is to used ?',
+    'Information - Email':'What interests us ?',
+    'Who - Email':'Who is involved ?',
+    'Type - Calculator':'What function of a calculator is to be used ?',
+    'Expression - Calculator':'What is the litteral expression ?',
+    'Numbers - Calculator':'What is the numerical expression ?',
+    'What - Translator':'What are we translating ?',
+    'Start language - Translator':'What is our starting language ?',
+    'End language - Translator':'What is our target language ?',
+    'What - Web search':'What are we searching for ?',
+    'Platform - Social media':'What social media platform are we accessing ?',
+    'What - Social media':'What interests us ?',
+    'Action - Social media':'What are we to do on social media ?',
+    'type of sentence  - Small talk':'What type of sentence is this ?',
+    'what - Small talk':'What are we talking about ?',
+    'Action - Message':'What are we doing in our messages?',
+    'Who - Message':'Who are we involving ?',
+    'What - Message':'What are we sending or acting on ?',
+    'Action - Reminders':'What are we doing in our reminders ?',
+    'Time - Reminders':'When is the time mentioned ?',
+    'What - Reminders':'What are we talking about ?',
+    'Type of music - Music':'What is the type of music ?',
+    'Author - Music':'Who is the author ?',
+    'Title - Music':'What is the title ?',
+    'Action - Music':'What are we to do ?'}
 
-#Firestore
+add_info = ['Default : here, now, weather',
+    'Options : Clock, Alarm, Timer, World Clock, Stopwatch',
+    'Operations: show, add, cancel, create event, delete, accept ; Default time : now',
+    'Default location : here ; Operations: here, directions, locate, transport, distance',
+    'Options : call, mute, charge, text, call history, contacts, Facetime, voicemail, do not disturb, end ',
+    'Options : write, reply, forward, inbox, contacts, outbox, mark unread, mark read, unsubscribe, spam',
+    'Options : Calculate, Set, Convert, Integrate, Solve, Geometry, Derivative',
+    'Common languages : English, Mandarin Chinese, Spanish, Hindi, French, Arabic, Bengali, Russian, Portuguese, Urdu, Italian, German',
+    ' ',
+    'Platforms : Facebook, Instagram, Twitter, Pinterest, TikTok, LinkedIn, Snapchat, Whatsapp, Youtube, WeChat, Telegram',
+    'Options : wh-question, command, exclamation, statement, yes/no question',
+    'Operations : send, delete, block, read, search, forward, reply, list, mark as read, set up',
+    'Operations : create, list, write, mark as complete, delete',
+    ' ']
+classes = ['Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music']
 
-db = firestore.Client.from_service_account_json("firestore-key.json")
 
 #Input
 
-@st.cache(allow_output_mutation=True)
-def button_states():
-    return {"pressed": None}
+user_input = st.text_area("Enter sentence :")
+button = st.button("Process")
 
-is_pressed = button_states()  # gets our cached dictionary
 
-user_input = st.text_area("Enter sentence to classify :")
-values = st.checkbox("Show values")
-button = st.button("Classify")
 
-if button:
-    # any changes need to be performed in place
-    is_pressed.update({"pressed": True})
-
-if is_pressed["pressed"]and user_input:
+if user_input and button:
     input = torch.tensor([tokenizer(user_input)["input_ids"]])
-    logits = model(input)[:2]
+    logits = model_classification(input)[:2]
     output = torch.nn.Softmax(dim=1)(logits[0])
     output = output[0].tolist()
     result = labels[np.argmax(output)]
-    st.markdown(f"<h2 style='text-align: center; color: black;'>~~~~{result}~~~~</h2>", unsafe_allow_html=True)
+    st.write(result)
 
-    if values:
-        y_pos = np.arange(len(labels))
-        width = 0.5
-        fig, ax = plt.subplots()
-        maxl = 0
-        hbars = ax.barh(y_pos , output,width, align='center')
-        maxl = max(maxl,max(output))
-        ax.set_yticks(y_pos, labels=labels)
-        ax.invert_yaxis()  # labels read top-to-bottom
-        ax.legend()
-        # Label with specially formatted floats
-        # ax.bar_label(hbars, fmt='%.2f')
-        ax.set_xlim(right=min(1,maxl+0.1))  # adjust xlim to fit labels
-        st.pyplot(fig)
+    text = f"{user_input} ; Class : {result} ; {add_info[classes.index(result)]} ;  "
+    questions = [alt_questions[x] for x in alt_questions.keys() if result in x]
+    for q in questions:
+        inputs = tokenizer(q, text, return_tensors="pt")
+        outputs = model_extraction(**inputs)
 
+        start = np.argmax(outputs.start_logits[0].tolist())
+        end = np.argmax(outputs.end_logits[0].tolist())
 
-    
-    sat = st.radio('Is this correct ?' , ('Yes','No'))
+        tokens = inputs.input_ids[0, start : end + 1]
 
-    if sat=='No':
-        option = st.selectbox('Class :', ('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
-    else:
-        option = result
-    send = st.button("Send")
-    
-    if send and sat!=None :
-        doc_ref = db.collection("classification").document(user_input)
-        doc_ref.set({"text":user_input,"class":option})
-        st.write('Thank you for your input !')
-        
+        answer = tokenizer.decode(tokens)
+
+        if '[CLS]' in answer:
+            answer = ""
+        st.write(q+"   "+answer)
