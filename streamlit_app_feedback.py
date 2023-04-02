@@ -206,7 +206,7 @@ if is_pressed["pressed"]and user_input:
     ##
         # df_test = pd.read_excel(r"C:\Users\malos\OneDrive\Documents\2A\PSC\Modèles\Assistant_virtuel\Classification\BdD1.xlsx")
         
-        df_test = pd.read_excel(r"E:\Ecole_Polytechnique\2A_PSC\Classification\Streamlit-main\BdD1.xlsx")
+        df_test = pd.read_excel("https://github.com/Malo-Aymes/Streamlit/blob/1c09229e984dba598b4db8b8eec9b5b8025408cb/BdD1.xlsx")
     ##
         # print(labels)
 
