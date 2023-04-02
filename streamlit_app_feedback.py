@@ -207,14 +207,7 @@ if is_pressed["pressed"]and user_input:
         
     ##  
     
-        @st.cache_data(ttl=600)
-        def load_data(sheets_url):
-            csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
-            st.write(sheets_url)
-            return pd.read_csv(csv_url, error_bad_lines=False)
-
-        df_test = load_data(st.secrets["gs_url"])
-        st.write(df_test)
+        df_test = pd.read_csv(requests.get("https://github.com/Malo-Aymes/Streamlit/blob/59697b4d9a763674916bf275604891d1f9a0eefc/BdD1.csv").content)
     ##
         # print(labels)
 
