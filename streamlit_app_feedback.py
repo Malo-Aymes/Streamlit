@@ -205,8 +205,15 @@ if is_pressed["pressed"]and user_input:
 
         df = pd.concat([df]*10,axis = 0,ignore_index=True)
         
-    ##      
-        df_test = pd.read_excel(requests.get("https://github.com/Malo-Aymes/Streamlit/blob/1c09229e984dba598b4db8b8eec9b5b8025408cb/BdD1.xlsx").content,engine='openpyxl')
+    ##  
+    
+        @st.cache_data(ttl=600)
+        def load_data(sheets_url):
+            csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+            return pd.read_csv(csv_url)
+
+        df_test = load_data(st.secrets["gs_url"])
+        #df_test = pd.read_excel(requests.get("https://github.com/Malo-Aymes/Streamlit/blob/1c09229e984dba598b4db8b8eec9b5b8025408cb/BdD1.xlsx").content,engine='openpyxl')
     ##
         # print(labels)
 
