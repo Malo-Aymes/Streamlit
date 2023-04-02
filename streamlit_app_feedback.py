@@ -213,12 +213,13 @@ if is_pressed["pressed"]and user_input:
             return pd.read_csv(csv_url, error_bad_lines=False)
 
         df_test = load_data(st.secrets["gs_url"])
-        #df_test = pd.read_excel(requests.get("https://github.com/Malo-Aymes/Streamlit/blob/1c09229e984dba598b4db8b8eec9b5b8025408cb/BdD1.xlsx").content,engine='openpyxl')
+        st.write(df_test)
     ##
         # print(labels)
 
         # print(df_test.columns[:12].tolist())
 
+        """
         df_test["labels"] = df_test[labels].values.tolist()
 
         df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
@@ -277,3 +278,4 @@ if is_pressed["pressed"]and user_input:
             if test_labels[i] == result:
                 count = count + 1    
         print("The rate of correction after updating on the original dataset is:", count/total_number_test)
+"""
