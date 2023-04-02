@@ -6,6 +6,7 @@ import torch
 import pandas as pd
 import numpy as np
 from pathlib import Path
+import requests
 from transformers import (AutoTokenizer, AutoModelForSequenceClassification,
                           PreTrainedModel, DistilBertModel, DistilBertForSequenceClassification,
                           TrainingArguments, Trainer)
@@ -204,7 +205,7 @@ if is_pressed["pressed"]and user_input:
         df = pd.concat([df]*10,axis = 0,ignore_index=True)
         
     ##      
-        df_test = pd.read_excel(request.get("https://github.com/Malo-Aymes/Streamlit/blob/1c09229e984dba598b4db8b8eec9b5b8025408cb/BdD1.xlsx").content)
+        df_test = pd.read_excel(requests.get("https://github.com/Malo-Aymes/Streamlit/blob/1c09229e984dba598b4db8b8eec9b5b8025408cb/BdD1.xlsx").content)
     ##
         # print(labels)
 
