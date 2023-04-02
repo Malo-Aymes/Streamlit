@@ -207,7 +207,7 @@ if is_pressed["pressed"]and user_input:
         
     ##  
     
-        df_test = pd.read_csv("https://github.com/Malo-Aymes/Streamlit/blob/59697b4d9a763674916bf275604891d1f9a0eefc/BdD1.csv")
+        df_test = pd.read_csv("https://https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.csv",index_col=0)
     ##
         # print(labels)
 
