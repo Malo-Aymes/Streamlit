@@ -210,6 +210,7 @@ if is_pressed["pressed"]and user_input:
         @st.cache_data(ttl=600)
         def load_data(sheets_url):
             csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+            st.write(sheets_url)
             return pd.read_csv(csv_url, error_bad_lines=False)
 
         df_test = load_data(st.secrets["gs_url"])
