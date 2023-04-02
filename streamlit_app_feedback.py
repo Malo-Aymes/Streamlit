@@ -215,7 +215,7 @@ if is_pressed["pressed"]and user_input:
 
         # print(df_test.columns[:12].tolist())
 
-        """
+#         """
         df_test["labels"] = df_test[labels].values.tolist()
 
         df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
@@ -274,4 +274,4 @@ if is_pressed["pressed"]and user_input:
             if test_labels[i] == result:
                 count = count + 1    
         print("The rate of correction after updating on the original dataset is:", count/total_number_test)
-"""
+# """
