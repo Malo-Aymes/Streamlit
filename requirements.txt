@@ -6,4 +6,4 @@ matplotlib
 requests
 google-cloud-firestore
 huggingface_hub
-openpyxl
+--upgrade openpyxl
