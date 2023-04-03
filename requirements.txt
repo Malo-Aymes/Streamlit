@@ -7,4 +7,3 @@ requests
 google-cloud-firestore
 huggingface_hub
 openpyxl
-subprocess
