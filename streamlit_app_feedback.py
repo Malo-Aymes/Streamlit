@@ -16,11 +16,6 @@ import matplotlib.pyplot as plt
 import huggingface_hub
 import openpyxl
 
-import subprocess
-import subprocess
-subprocess.call(['wget', 'https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/setup.sh'])
-subprocess.call(['chmod', '+x', 'setup.sh'])
-subprocess.call('./setup.sh')
 
 #Imports
 
