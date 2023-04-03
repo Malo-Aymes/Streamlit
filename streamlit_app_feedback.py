@@ -16,6 +16,9 @@ import matplotlib.pyplot as plt
 import huggingface_hub
 import openpyxl
 
+import subprocess
+subprocess.call('./setup.sh')
+
 #Imports
 
 import transformers
