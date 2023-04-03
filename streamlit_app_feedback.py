@@ -209,13 +209,9 @@ if is_pressed["pressed"]and user_input:
     
         df_test = pd.read_csv("https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.csv",sep=";",encoding= 'unicode_escape',error_bad_lines=False)
       
-        st.write(df_test)
+        st.write(df_test.columns[:12].tolist())
     ##
-        # print(labels)
 
-        # print(df_test.columns[:12].tolist())
-
-#         """
         df_test["labels"] = df_test[labels].values.tolist()
 
         df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
@@ -274,4 +270,3 @@ if is_pressed["pressed"]and user_input:
             if test_labels[i] == result:
                 count = count + 1    
         print("The rate of correction after updating on the original dataset is:", count/total_number_test)
-# """
