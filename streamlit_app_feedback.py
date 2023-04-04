@@ -90,7 +90,7 @@ def classify(s,model):
 
         return output
 
-@st.cache_ressource(allow_output_mutation = True)
+@st.cache_resource(allow_output_mutation = True)
 def get_model():
     huggingface_hub.login(token = "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")
     tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
