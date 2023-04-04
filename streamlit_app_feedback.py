@@ -90,7 +90,7 @@ def classify(s,model):
 
         return output
 
-@st.cache_resource(allow_output_mutation = True)
+@st.cache_resource
 def get_model():
     huggingface_hub.login(token = "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")
     tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
@@ -116,7 +116,7 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 
 #Input
 
-@st.cache_data(allow_output_mutation=True)
+@st.cache_data
 def button_states():
     return {"pressed": None}
 
