@@ -268,4 +268,4 @@ if is_pressed["pressed"]and user_input:
             result = labels[np.argmax(output)]
             if test_labels[i] == result:
                 count = count + 1    
-        print("The rate of correction after updating on the original dataset is:", count/total_number_test)
+        st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
