@@ -210,7 +210,7 @@ if is_pressed["pressed"]and user_input:
     
         df_test = pd.read_csv("https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.csv",sep=";",encoding= 'unicode_escape',error_bad_lines=False)
       
-        st.write(df_test.columns[:12].tolist())
+       # st.write(df_test.columns[:12].tolist())
     ##
 
         df_test["labels"] = df_test[labels].values.tolist()
@@ -265,6 +265,7 @@ if is_pressed["pressed"]and user_input:
         count =0
         for i in range(total_number_test):
             ouput = classify(df_test["text"].values.tolist()[i],model)
+            st.write(df_test["text"].values.tolist()[i] , "->" , output)
             result = labels[np.argmax(output)]
             if test_labels[i] == result:
                 count = count + 1    
