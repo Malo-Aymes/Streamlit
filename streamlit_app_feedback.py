@@ -268,5 +268,7 @@ if is_pressed["pressed"]and user_input:
             st.write(df_test["text"].values.tolist()[i] , "->" , output)
             result = labels[np.argmax(output)]
             if test_labels[i] == result:
-                count = count + 1    
+                count = count + 1
+            st.write(df_test["text"].values.tolist()[i] , "->" , result)
+            st.write(test_labels[i])
         st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
