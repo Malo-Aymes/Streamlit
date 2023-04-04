@@ -265,7 +265,6 @@ if is_pressed["pressed"]and user_input:
         count =0
         for i in range(total_number_test):
             ouput = classify(df_test["text"].values.tolist()[i],model)
-            st.write(df_test["text"].values.tolist()[i] , "->" , output)
             result = labels[np.argmax(output)]
             if test_labels[i] == result:
                 count = count + 1
