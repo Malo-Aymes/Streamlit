@@ -233,15 +233,13 @@ if is_pressed["pressed"]and user_input:
         train_dataset = GoEmotionDataset(train_encodings, train_labels)
         test_dataset = GoEmotionDataset(test_encodings, test_labels)
 
-        """args = TrainingArguments(
+        args = TrainingArguments(
             output_dir="classification_test",
             evaluation_strategy = "epoch",
-            save_strategy='epoch',
             learning_rate=2e-5,
             num_train_epochs=3,
-            weight_decay=0.01,
-            push_to_hub = True
-        )"""
+            weight_decay=0.01
+        )
 
 
         trainer = Trainer(
@@ -252,7 +250,7 @@ if is_pressed["pressed"]and user_input:
             tokenizer=tokenizer)
 
         trainer.train()
-        trainer.push_to_hub("classification_test")
+        trainer.save_model()
 
 
         ## verify if the model is destroyed on the original dataset
