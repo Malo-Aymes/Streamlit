@@ -116,7 +116,7 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 
 #Input
 
-@st.cache_data
+@st.cache_resource
 def button_states():
     return {"pressed": None}
 
