@@ -214,7 +214,7 @@ if is_pressed["pressed"]and user_input:
 
         df_test["labels"] = df_test[labels].values.tolist()
 
-        df = pd.concat([df,df_test.sample(1000)],axis = 0,ignore_index=True)
+        df = pd.concat([df,df_test.sample(100)],axis = 0,ignore_index=True)
 
         df_test = df_test.sample(100)
 
