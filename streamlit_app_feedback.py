@@ -84,7 +84,7 @@ class DistilBertForMultilabelSequenceClassification(DistilBertForSequenceClassif
 st.title("Classification : Virtual Assistant")
 
 def classify(s,model):
-        input = torch.tensor([tokenizer(user_input)["input_ids"]])
+        input = torch.tensor([tokenizer(s)["input_ids"]])
         logits = model(input)[:2]
         output = torch.nn.Softmax(dim=1)(logits[0])
         output = output[0].tolist()
@@ -254,13 +254,13 @@ if is_pressed["pressed"]and user_input:
 
         ## verify if the model is destroyed on the original dataset
         total_number_test = 100 ##number of samples to test after update
-        df_test = df_test.sample(total_number_test)
+        df_evaluate = df_test.sample(total_number_test)
                 
         true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(total_number_test) ]
 
         count =0
         for i in range(total_number_test):
-            output_i = classify(df_test["text"].values.tolist()[i],model)
+            output_i = classify(df_evaluate["text"].values.tolist()[i],model)
             result_i = labels[np.argmax(output_i)]
             st.write(i,true_labels[i]," - - ",result_i)
 
