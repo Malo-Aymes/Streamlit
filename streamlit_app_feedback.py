@@ -172,7 +172,7 @@ if is_pressed["pressed"]and user_input:
         doc_ref = db.collection("classification").document(user_input)
         doc_ref.set({"text":user_input,"class":option})
         st.write('Thank you for your input !')
-    if send and sat == 'Yes':
+    if send and sat == 'No':
         class GoEmotionDataset(torch.utils.data.Dataset):
             def __init__(self, encodings, labels):
                 self.encodings = encodings
