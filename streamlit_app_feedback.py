@@ -158,7 +158,30 @@ if is_pressed["pressed"]and user_input:
 
     
     sat = st.radio('Is this correct ?' , ('Yes','No'))
+    
+    
+    ## voir le resultat de rate frequence
+    if sat == 'Yes':
+      ## verify if the model is destroyed on the original dataset
+        total_number_test = 100 ##number of samples to test after update
+        df_test = df_test.sample(total_number_test)
+                
+        test_labels = df_test["labels"].values.tolist()        
+        test_encodings = tokenizer(df_test["text"].values.tolist(), truncation=True)
 
+        test_dataset = GoEmotionDataset(test_encodings, test_labels)
+
+        count =0
+        for i in range(total_number_test):
+            ouput = classify(df_test["text"].values.tolist()[i],model)
+            result = labels[np.argmax(output)]
+            st.write("the :", i)
+            if test_labels[i] == result:
+                count = count + 1
+                print(test_labels[i])
+        st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
+
+     ##
     if sat=='No':
         option = st.selectbox('Class :', ('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
     else:
@@ -211,6 +234,7 @@ if is_pressed["pressed"]and user_input:
     
         df_test = pd.read_csv("https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.csv",sep=";",encoding= 'unicode_escape',error_bad_lines=False)
     ##
+        st.write(df_test.shape)
 
         df_test["labels"] = df_test[labels].values.tolist()
 
@@ -233,13 +257,12 @@ if is_pressed["pressed"]and user_input:
         test_dataset = GoEmotionDataset(test_encodings, test_labels)
 
         args = TrainingArguments(
-            output_dir="Deopusi/classification_test",
+            output_dir="classification_test",
             overwrite_output_dir=True,
             evaluation_strategy = "epoch",
             learning_rate=2e-5,
             num_train_epochs=3,
-            weight_decay=0.01,
-            push_to_hub = True
+            weight_decay=0.01
         )
 
 
@@ -266,6 +289,8 @@ if is_pressed["pressed"]and user_input:
         for i in range(total_number_test):
             ouput = classify(df_test["text"].values.tolist()[i],model)
             result = labels[np.argmax(output)]
+#             st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
+
             if test_labels[i] == result:
                 count = count + 1
         #st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
