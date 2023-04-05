@@ -253,7 +253,7 @@ if is_pressed["pressed"]and user_input:
             tokenizer=tokenizer)
 
         trainer.train()
-        trainer.save_model()
+        model.push_to_hub("classification_test",overwrite=True,use_auth_token="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")
 
         ## verify if the model is destroyed on the original dataset
         total_number_test = 100 ##number of samples to test after update
