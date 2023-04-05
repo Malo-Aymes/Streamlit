@@ -235,6 +235,7 @@ if is_pressed["pressed"]and user_input:
 
         args = TrainingArguments(
             output_dir="classification_test",
+            overwrite_output_dir=True,
             evaluation_strategy = "epoch",
             learning_rate=2e-5,
             num_train_epochs=3,
@@ -251,12 +252,6 @@ if is_pressed["pressed"]and user_input:
 
         trainer.train()
         trainer.save_model()
-        
-        for secs in range(60,0,-1):
-          points = [".  "," . ","  ."]
-          st.write(f"Please wait {points[secs%3]} {secs} sec remaining")
-          time.sleep(1)
-
 
         ## verify if the model is destroyed on the original dataset
         total_number_test = 100 ##number of samples to test after update
@@ -273,4 +268,4 @@ if is_pressed["pressed"]and user_input:
             result = labels[np.argmax(output)]
             if test_labels[i] == result:
                 count = count + 1
-        st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
+        #st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
