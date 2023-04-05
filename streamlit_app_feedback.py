@@ -216,15 +216,13 @@ if is_pressed["pressed"]and user_input:
 
         df_test["labels"] = df_test[labels].values.tolist()
 
-        df = pd.concat([df,df_test.sample(100)],axis = 0,ignore_index=True)
-
-        df_test = df_test.sample(100)
+        df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
 
         # print(df_test.columns[:14].tolist())
 
 
         train_encodings = tokenizer(df["text"].values.tolist(), truncation=True)
-        test_encodings = tokenizer(df_test["text"].values.tolist(), truncation=True)
+        test_encodings = tokenizer(df_test.sample(100)["text"].values.tolist(), truncation=True)
 
 
         train_labels = df["labels"].values.tolist()
@@ -264,9 +262,9 @@ if is_pressed["pressed"]and user_input:
         for i in range(total_number_test):
             output_i = classify(df_test["text"].values.tolist()[i],model)
             result_i = labels[np.argmax(output_i)]
-            st.write(i)
+            st.write(i,true_labels[i]," - - ",result_i)
 
             if true_labels[i] == result_i:
                 count = count + 1
-                st.write(result_i)
+                #st.write(result_i)
         st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
