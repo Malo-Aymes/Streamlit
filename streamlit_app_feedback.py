@@ -258,10 +258,7 @@ if is_pressed["pressed"]and user_input:
         total_number_test = 100 ##number of samples to test after update
         df_test = df_test.sample(total_number_test)
                 
-        test_labels = df_test["labels"].values.tolist()        
-        test_encodings = tokenizer(df_test["text"].values.tolist(), truncation=True)
-
-        test_dataset = GoEmotionDataset(test_encodings, test_labels)
+        true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(total_number_test) ]
 
         count =0
         for i in range(total_number_test):
@@ -269,7 +266,7 @@ if is_pressed["pressed"]and user_input:
             result = labels[np.argmax(output)]
             st.write(i)
 
-            if labels[np.argmax(test_labels[i])] == result:
+            if true_labels[i] == result:
                 count = count + 1
                 st.write(result)
         st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
