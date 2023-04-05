@@ -262,11 +262,11 @@ if is_pressed["pressed"]and user_input:
 
         count =0
         for i in range(total_number_test):
-            ouput = classify(df_test["text"].values.tolist()[i],model)
-            result = labels[np.argmax(output)]
+            ouput_i = classify(df_test["text"].values.tolist()[i],model)
+            result_i = labels[np.argmax(output)]
             st.write(i)
 
-            if true_labels[i] == result:
+            if true_labels[i] == result_i:
                 count = count + 1
-                st.write(result)
+                st.write(result_i)
         st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
