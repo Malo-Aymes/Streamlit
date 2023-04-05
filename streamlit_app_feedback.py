@@ -209,9 +209,8 @@ if is_pressed["pressed"]and user_input:
     ##  
     
         df_test = pd.read_csv("https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.csv",sep=";",encoding= 'unicode_escape',error_bad_lines=False)
-      
-       # st.write(df_test.columns[:12].tolist())
     ##
+        st.write(df_test.shape)
 
         df_test["labels"] = df_test[labels].values.tolist()
 
