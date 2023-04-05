@@ -30,6 +30,7 @@ from transformers.modeling_outputs import SequenceClassifierOutput
 import matplotlib.pyplot as plt
 import requests
 import io
+import time
 
 import streamlit as st
 from google.cloud import firestore
@@ -250,6 +251,11 @@ if is_pressed["pressed"]and user_input:
 
         trainer.train()
         trainer.save_model()
+        
+        for secs in range(60,0,-1):
+          points = [".  "," . ","  ."]
+          st.write(f"Please wait {points[secs%3]} {secs} sec remaining")
+          time.sleep(1)
 
 
         ## verify if the model is destroyed on the original dataset
