@@ -158,6 +158,8 @@ if is_pressed["pressed"]and user_input:
 
     
     sat = st.radio('Is this correct ?' , ('Yes','No'))
+    
+    
 
     if sat=='No':
         option = st.selectbox('Class :', ('Weather', 'Clock', 'Calendar', 'Map', 'Phone', 'Email', 'Calculator', 'Translator', 'Web search', 'Social media', 'Small talk', 'Message', 'Reminders', 'Music'))
@@ -170,7 +172,7 @@ if is_pressed["pressed"]and user_input:
         doc_ref = db.collection("classification").document(user_input)
         doc_ref.set({"text":user_input,"class":option})
         st.write('Thank you for your input !')
-    if send and sat == 'No':
+    if send and sat == 'Yes':
         class GoEmotionDataset(torch.utils.data.Dataset):
             def __init__(self, encodings, labels):
                 self.encodings = encodings
@@ -211,6 +213,7 @@ if is_pressed["pressed"]and user_input:
     
         df_test = pd.read_csv("https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.csv",sep=";",encoding= 'unicode_escape',error_bad_lines=False)
     ##
+        st.write(df_test.shape)
 
         df_test["labels"] = df_test[labels].values.tolist()
 
@@ -233,7 +236,7 @@ if is_pressed["pressed"]and user_input:
         test_dataset = GoEmotionDataset(test_encodings, test_labels)
 
         args = TrainingArguments(
-            output_dir="Deopusi/classification_test",
+            output_dir="classification_test",
             overwrite_output_dir=True,
             evaluation_strategy = "epoch",
             learning_rate=2e-5,
@@ -250,7 +253,7 @@ if is_pressed["pressed"]and user_input:
             tokenizer=tokenizer)
 
         trainer.train()
-        model.push_to_hub("classification_test", use_auth_token="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", overwrite=True)
+        trainer.save_model()
 
         ## verify if the model is destroyed on the original dataset
         total_number_test = 100 ##number of samples to test after update
@@ -265,6 +268,9 @@ if is_pressed["pressed"]and user_input:
         for i in range(total_number_test):
             ouput = classify(df_test["text"].values.tolist()[i],model)
             result = labels[np.argmax(output)]
+            st.write(i)
+
             if test_labels[i] == result:
                 count = count + 1
-        #st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
+                st.write(result)
+        st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
