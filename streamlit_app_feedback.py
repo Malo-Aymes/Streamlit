@@ -211,7 +211,6 @@ if is_pressed["pressed"]and user_input:
     
         df_test = pd.read_csv("https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.csv",sep=";",encoding= 'unicode_escape',error_bad_lines=False)
     ##
-        st.write(df_test.shape)
 
         df_test["labels"] = df_test[labels].values.tolist()
 
@@ -234,12 +233,13 @@ if is_pressed["pressed"]and user_input:
         test_dataset = GoEmotionDataset(test_encodings, test_labels)
 
         args = TrainingArguments(
-            output_dir="classification_test",
+            output_dir="Deopusi/classification_test",
             overwrite_output_dir=True,
             evaluation_strategy = "epoch",
             learning_rate=2e-5,
             num_train_epochs=3,
-            weight_decay=0.01
+            weight_decay=0.01,
+            push_to_hub = True
         )
 
 
