@@ -262,8 +262,8 @@ if is_pressed["pressed"]and user_input:
 
         count =0
         for i in range(total_number_test):
-            ouput_i = classify(df_test["text"].values.tolist()[i],model)
-            result_i = labels[np.argmax(output)]
+            output_i = classify(df_test["text"].values.tolist()[i],model)
+            result_i = labels[np.argmax(output_i)]
             st.write(i)
 
             if true_labels[i] == result_i:
