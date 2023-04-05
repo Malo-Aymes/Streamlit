@@ -1,4 +1,4 @@
-#Imports
+a#Imports
 
 import transformers
 
@@ -256,7 +256,7 @@ if is_pressed["pressed"]and user_input:
         total_number_test = 100 ##number of samples to test after update
         df_evaluate = df_test.sample(total_number_test)
                 
-        true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(total_number_test) ]
+        true_labels = [ labels[np.argmax(df_evaluate["labels"].values.tolist()[i])] for i in range(total_number_test) ]
 
         count =0
         for i in range(total_number_test):
