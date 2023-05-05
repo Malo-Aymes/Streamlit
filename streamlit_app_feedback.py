@@ -211,7 +211,7 @@ if is_pressed["pressed"]and user_input:
         
     ##  
     
-        df_test = pd.read_excel(request.get("https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.xlsx").content,engine = "openpyxl")
+        df_test = pd.read_excel(requests.get("https://raw.githubusercontent.com/Malo-Aymes/Streamlit/main/BdD1.xlsx").content,engine = "openpyxl")
     ##
 
         df_test["labels"] = df_test[labels].values.tolist()
