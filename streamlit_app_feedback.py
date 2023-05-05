@@ -216,7 +216,7 @@ if is_pressed["pressed"]and user_input:
 
         df_test["labels"] = df_test[labels].values.tolist()
       
-        true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(total_number_test) ]
+        true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(654) ]
         count = 0
         for i in range(654):
             output_i = classify(df_test["text"].values.tolist()[i],model)
@@ -288,7 +288,7 @@ if is_pressed["pressed"]and user_input:
         st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)"""
         
         
-        true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(total_number_test) ]
+        true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(654) ]
         count = 0
         for i in range(654):
             output_i = classify(df_test["text"].values.tolist()[i],model)
