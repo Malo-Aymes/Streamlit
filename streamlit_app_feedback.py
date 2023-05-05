@@ -207,7 +207,7 @@ if is_pressed["pressed"]and user_input:
 
         df["labels"] = df[labels].values.tolist()
 
-        df = pd.concat([df]*10,axis = 0,ignore_index=True)
+        #df = pd.concat([df]*10,axis = 0,ignore_index=True)
         
     ##  
     
@@ -216,9 +216,15 @@ if is_pressed["pressed"]and user_input:
 
         df_test["labels"] = df_test[labels].values.tolist()
 
-        df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
+        #df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
+        
+        df = pd.concat([df,df_test],axis = 0,ignore_index=True)
 
         # print(df_test.columns[:14].tolist())
+        
+        model = DistilBertForMultilabelSequenceClassification.from_pretrained("distilbert-base-uncased", num_labels=14)
+        model.config.id2label = id2label
+        model.config.label2id = label2id
 
 
         train_encodings = tokenizer(df["text"].values.tolist(), truncation=True)
@@ -256,7 +262,7 @@ if is_pressed["pressed"]and user_input:
         total_number_test = 100 ##number of samples to test after update
         df_evaluate = df_test.sample(total_number_test)
                 
-        true_labels = [ labels[np.argmax(df_evaluate["labels"].values.tolist()[i])] for i in range(total_number_test) ]
+        """true_labels = [ labels[np.argmax(df_evaluate["labels"].values.tolist()[i])] for i in range(total_number_test) ]
 
         count =0
         for i in range(total_number_test):
@@ -267,12 +273,12 @@ if is_pressed["pressed"]and user_input:
             if true_labels[i] == result_i:
                 count = count + 1
                 #st.write(result_i)
-        st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
+        st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)"""
         
         
         true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(total_number_test) ]
         count = 0
-        for i in range(total_number_test):
+        for i in range(654):
             output_i = classify(df_test["text"].values.tolist()[i],model)
             result_i = labels[np.argmax(output_i)]
             st.write(i,true_labels[i]," - - ",result_i)
@@ -280,4 +286,4 @@ if is_pressed["pressed"]and user_input:
             if true_labels[i] == result_i:
                 count = count + 1
                 #st.write(result_i)
-        st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)
+        st.write("The rate of correction on the original dataset, after updating the model, is:", count/total_number_test)
