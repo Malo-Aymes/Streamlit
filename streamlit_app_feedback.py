@@ -225,7 +225,7 @@ if is_pressed["pressed"]and user_input:
             if true_labels[i] == result_i:
                 count = count + 1
                 #st.write(result_i)
-        st.write("The rate of correction on the original dataset, before updating the model, is:", count/total_number_test)
+        st.write("The rate of correction on the original dataset, before updating the model, is:", count/654)
 
         #df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
         
@@ -269,9 +269,6 @@ if is_pressed["pressed"]and user_input:
         trainer.train()
         model.push_to_hub("classification_test",overwrite=True,use_auth_token="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")
 
-        ## verify if the model is destroyed on the original dataset
-        total_number_test = 100 ##number of samples to test after update
-        df_evaluate = df_test.sample(total_number_test)
                 
         """true_labels = [ labels[np.argmax(df_evaluate["labels"].values.tolist()[i])] for i in range(total_number_test) ]
 
@@ -296,4 +293,4 @@ if is_pressed["pressed"]and user_input:
             if true_labels[i] == result_i:
                 count = count + 1
                 #st.write(result_i)
-        st.write("The rate of correction on the original dataset, after updating the model, is:", count/total_number_test)
+        st.write("The rate of correction on the original dataset, after updating the model, is:", count/654)
