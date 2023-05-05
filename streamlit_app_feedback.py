@@ -95,7 +95,7 @@ def classify(s,model):
 def get_model():
     huggingface_hub.login(token = "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")
     tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
-    model = DistilBertForMultilabelSequenceClassification.from_pretrained("Deopusi/classification_test",num_labels=14)
+    model = DistilBertForMultilabelSequenceClassification.from_pretrained("Deopusi/virtual_assistant_classification",num_labels=14)
     return tokenizer,model
 
 
@@ -207,7 +207,7 @@ if is_pressed["pressed"]and user_input:
 
         df["labels"] = df[labels].values.tolist()
 
-        #df = pd.concat([df]*10,axis = 0,ignore_index=True)
+        df = pd.concat([df]*10,axis = 0,ignore_index=True)
         
     ##  
     
@@ -227,13 +227,13 @@ if is_pressed["pressed"]and user_input:
                 #st.write(result_i)
         st.write("The rate of correction on the original dataset, before updating the model, is:", count/654)
 
-        #df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
+        df = pd.concat([df,df_test.sample(10)],axis = 0,ignore_index=True)
         
-        df = pd.concat([df,df_test],axis = 0,ignore_index=True)
+        #df = pd.concat([df,df_test],axis = 0,ignore_index=True)
 
         # print(df_test.columns[:14].tolist())
         
-        model = DistilBertForMultilabelSequenceClassification.from_pretrained("distilbert-base-uncased", num_labels=14)
+        #model = DistilBertForMultilabelSequenceClassification.from_pretrained("distilbert-base-uncased", num_labels=14)
         model.config.id2label = id2label
         model.config.label2id = label2id
 
