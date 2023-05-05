@@ -95,7 +95,7 @@ def classify(s,model):
 def get_model():
     huggingface_hub.login(token = "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")
     tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
-    model = DistilBertForMultilabelSequenceClassification.from_pretrained("Deopusi/virtual_assistant_classification",num_labels=14)
+    model = DistilBertForMultilabelSequenceClassification.from_pretrained("Deopusi/classification_test",num_labels=14)
     return tokenizer,model
 
 
@@ -269,19 +269,6 @@ if is_pressed["pressed"]and user_input:
         trainer.train()
         model.push_to_hub("classification_test",overwrite=True,use_auth_token="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")
 
-                
-        """true_labels = [ labels[np.argmax(df_evaluate["labels"].values.tolist()[i])] for i in range(total_number_test) ]
-
-        count =0
-        for i in range(total_number_test):
-            output_i = classify(df_evaluate["text"].values.tolist()[i],model)
-            result_i = labels[np.argmax(output_i)]
-            st.write(i,true_labels[i]," - - ",result_i)
-
-            if true_labels[i] == result_i:
-                count = count + 1
-                #st.write(result_i)
-        st.write("The rate of correction after updating on the original dataset is:", count/total_number_test)"""
         
         
         true_labels = [ labels[np.argmax(df_test["labels"].values.tolist()[i])] for i in range(654) ]
